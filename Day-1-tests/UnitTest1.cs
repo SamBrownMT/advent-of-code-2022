@@ -20,4 +20,10 @@ public class Tests
     {
         Assert.That(Calories.Convert(new string[] {" ","notSpace","3"}),Is.EquivalentTo(new int[] {0,0,3}));
     }
+
+    [Test]
+    public void ReturnsHighestCalories()
+    {
+        Assert.That(Calories.Highest(new int[] {1,2,3}),Is.EqualTo(3));
+    }
 }

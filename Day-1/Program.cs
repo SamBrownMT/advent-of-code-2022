@@ -8,6 +8,12 @@ namespace AdventOfCode
             Console.WriteLine(Convert(new string[] {" "}));
         }
 
+        public static int Highest(int[] arr)
+        {
+            Array.Sort(arr);
+            return arr[^1];
+        }
+
         public static int[] Convert(string[] arr)
         {
             return Array.ConvertAll(arr, IntegerParser);
