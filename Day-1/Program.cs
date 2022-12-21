@@ -5,12 +5,24 @@ namespace AdventOfCode
     public class Calories
     {
         public static void Main(string[] args) {
-            
+            Console.WriteLine(Convert(new string[] {" "}));
         }
 
         public static int[] Convert(string[] arr)
         {
-            return Array.ConvertAll(arr, int.Parse);
+            return Array.ConvertAll(arr, IntegerParser);
+        }
+
+        public static int IntegerParser(string s)
+        {
+            try
+            {
+                return Int32.Parse(s);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
     }
 }
