@@ -1,4 +1,5 @@
 using AdventOfCode;
+using System.IO;
 
 namespace input_converter_tests;
 
@@ -17,4 +18,13 @@ public class Tests
 
     [Test]
     public void ConnectTest() => Assert.That(new InputConverter(), Is.Not.Null);
+
+    [Test]
+    public void SplitTest()
+    {
+        string readTestFile =
+            System.IO.File.ReadAllText("/Users/sam.brown/Advent-of-code-2022/input-converter-tests/test-file.txt");
+        string[] readFileArray = new string[] { "I", "Am", "A", "Test" };
+        Assert.That(InputConverter.Split(readTestFile), Is.EquivalentTo(readFileArray));
+    }
 }

@@ -4,9 +4,14 @@ namespace AdventOfCode
 {
     public class InputConverter
     {
-        public static void Main()
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine(Split(args[0]));
+        }
+
+        public static string[] Split(string text)
+        {
+            return text.Split("\n");
         }
     }
 }
