@@ -6,12 +6,12 @@ namespace AdventOfCode
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine(Split(args[0]));
+            Console.WriteLine(Split(args[0],"\n"));
         }
 
-        public static string[] Split(string text)
+        public static string[] Split(string text,string separator)
         {
-            return text.Split("\n");
+            return text.Split(separator);
         }
     }
 }

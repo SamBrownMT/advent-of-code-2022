@@ -25,6 +25,6 @@ public class Tests
         string readTestFile =
             System.IO.File.ReadAllText("/Users/sam.brown/Advent-of-code-2022/input-converter-tests/test-file.txt");
         string[] readFileArray = new string[] { "I", "Am", "A", "Test" };
-        Assert.That(InputConverter.Split(readTestFile), Is.EquivalentTo(readFileArray));
+        Assert.That(InputConverter.Split(readTestFile,"\n"), Is.EquivalentTo(readFileArray));
     }
 }

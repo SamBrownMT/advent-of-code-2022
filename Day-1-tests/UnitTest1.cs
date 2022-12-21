@@ -26,4 +26,9 @@ public class Tests
     {
         Assert.That(Calories.Highest(new int[] {1,2,3}),Is.EqualTo(3));
     }
+    [Test]
+    public void ReturnsHighestCalories2()
+    {
+        Assert.That(Calories.Highest(new int[] {3,2,1}),Is.EqualTo(3));
+    }
 }

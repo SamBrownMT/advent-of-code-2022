@@ -4,10 +4,6 @@ namespace AdventOfCode
 {
     public class Calories
     {
-        public static void Main(string[] args) {
-            Console.WriteLine(Convert(new string[] {" "}));
-        }
-
         public static int Highest(int[] arr)
         {
             Array.Sort(arr);
@@ -31,6 +27,4 @@ namespace AdventOfCode
             }
         }
     }
-}
-
- 
+} 
