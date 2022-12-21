@@ -27,4 +27,12 @@ public class Tests
         string[] readFileArray = new string[] { "I", "Am", "A", "Test" };
         Assert.That(InputConverter.Split(readTestFile,"\n"), Is.EquivalentTo(readFileArray));
     }
+    
+    [Test]
+    public void SplitTest2()
+    {
+        string toBeSplit = "I Am A Test";
+        string[] readFileArray = new string[] { "I", "Am", "A", "Test" };
+        Assert.That(InputConverter.Split(toBeSplit," "), Is.EquivalentTo(readFileArray));
+    }
 }
