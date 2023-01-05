@@ -22,6 +22,19 @@ public class Tests
     }
 
     [Test]
+    public void ConvertsMultiArray()
+    {
+        var multiArray = Calories.ConvertToMultiArray(new string[] { "1\n2\n3", "4" });
+        int[][] expected =
+        {
+            new int[] { 1, 2, 3 } ,
+            new int[] { 4 }
+        };
+
+        Assert.That(multiArray,Is.EquivalentTo(expected));
+    }
+
+    [Test]
     public void ReturnsHighestCalories()
     {
         Assert.That(Calories.Highest(new int[] {1,2,3}),Is.EqualTo(3));
@@ -30,5 +43,11 @@ public class Tests
     public void ReturnsHighestCalories2()
     {
         Assert.That(Calories.Highest(new int[] {3,2,1}),Is.EqualTo(3));
+    }
+
+    [Test]
+    public void ReturnsSumsOfFood()
+    {
+        Assert.That(Calories.Sums(new int[,] {{1,2,3}}),Is.EqualTo(new int[] {6}));
     }
 }
