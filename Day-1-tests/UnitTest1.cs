@@ -62,4 +62,10 @@ public class Tests
     {
         Assert.That(Calories.TotalCalorieArray(new string[] {"1\n2\n3\n","3\n4" }),Is.EquivalentTo(new int[] {6,7}));
     }
+
+    [Test]
+    public void Execute()
+    {
+        Assert.That(Calories.Execute(new string[] {"1\n2\n3","4\n5"}),Is.EqualTo(9));
+    }
 }
