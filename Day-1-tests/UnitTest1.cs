@@ -50,4 +50,16 @@ public class Tests
     {
         Assert.That(Calories.Sums(new int[,] {{1,2,3}}),Is.EqualTo(new int[] {6}));
     }
+
+    [Test]
+    public void CreateCalorieArray()
+    {
+        Assert.That(Calories.TotalCalorieArray(new string[] {"1\n2\n3\n" }),Is.EquivalentTo(new int[] {6}));
+    }
+    
+    [Test]
+    public void CreateCalorieArray2()
+    {
+        Assert.That(Calories.TotalCalorieArray(new string[] {"1\n2\n3\n","3\n4" }),Is.EquivalentTo(new int[] {6,7}));
+    }
 }

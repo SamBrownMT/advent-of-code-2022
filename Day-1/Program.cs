@@ -10,6 +10,16 @@ namespace AdventOfCode
             return arr[^1];
         }
 
+        public static List<int> TotalCalorieArray(string[] arr)
+        {
+            var totalCalories = (
+                from elf in arr select InputConverter.Split(elf, "\n") 
+                into elfArray select Array.ConvertAll(elfArray, IntegerParser) 
+                into elfIntArray select elfIntArray.Sum()
+                ).ToList();
+            return totalCalories;
+        }
+
         public static int[] Sums(int[,] arr)
         {
             return new int[] { 6 };
