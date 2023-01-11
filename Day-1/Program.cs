@@ -12,6 +12,13 @@ namespace Day_1
             return totalCalories.Max();
         }
 
+        public static int SumHighestXCalories(List<int> arr, int topNumbers)
+        {
+            arr.Sort();
+            var topNumbersArray = arr.GetRange(arr.Count - topNumbers, topNumbers);
+            return topNumbersArray.Sum();
+        }
+
         public static List<int> TotalCalorieArray(string[] arr)
         {
             var totalCalories = (

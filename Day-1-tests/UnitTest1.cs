@@ -27,4 +27,16 @@ public class Tests
     {
         Assert.That(Calories.HighestCalorie(new string[] {"1\n2\n3","4\n5"}),Is.EqualTo(9));
     }
+
+    [Test]
+    public void GetHighestCaloriesForGivenNumber()
+    {
+        Assert.That(Calories.SumHighestXCalories(new List<int> {1,2,3},3),Is.EqualTo(6));
+    }
+    
+    [Test]
+    public void GetHighestCaloriesForGivenNumber2()
+    {
+        Assert.That(Calories.SumHighestXCalories(new List<int> {1,2,3,4,5,6},2),Is.EqualTo(11));
+    }
 }
