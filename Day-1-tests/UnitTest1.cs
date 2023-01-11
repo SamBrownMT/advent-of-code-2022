@@ -35,17 +35,6 @@ public class Tests
     }
 
     [Test]
-    public void ReturnsHighestCalories()
-    {
-        Assert.That(Calories.Highest(new int[] {1,2,3}),Is.EqualTo(3));
-    }
-    [Test]
-    public void ReturnsHighestCalories2()
-    {
-        Assert.That(Calories.Highest(new int[] {3,2,1}),Is.EqualTo(3));
-    }
-
-    [Test]
     public void ReturnsSumsOfFood()
     {
         Assert.That(Calories.Sums(new int[,] {{1,2,3}}),Is.EqualTo(new int[] {6}));
@@ -66,6 +55,6 @@ public class Tests
     [Test]
     public void Execute()
     {
-        Assert.That(Calories.Execute(new string[] {"1\n2\n3","4\n5"}),Is.EqualTo(9));
+        Assert.That(Calories.HighestCalorie(new string[] {"1\n2\n3","4\n5"}),Is.EqualTo(9));
     }
 }

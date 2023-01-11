@@ -4,15 +4,10 @@ namespace AdventOfCode
 {
     public class Calories
     {
-        public static int Execute(string[] arr)
+        public static int HighestCalorie(string[] arr)
         {
             var totalCalories = TotalCalorieArray(arr);
-            return Highest(totalCalories.ToArray());
-        }
-        public static int Highest(int[] arr)
-        {
-            Array.Sort(arr);
-            return arr[^1];
+            return totalCalories.Max();
         }
 
         public static List<int> TotalCalorieArray(string[] arr)
