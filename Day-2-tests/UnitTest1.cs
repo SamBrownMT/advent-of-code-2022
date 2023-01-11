@@ -20,4 +20,10 @@ public class Tests
     {
         Assert.That(RockPaperScissors.TotalScore(new string[] {"B Y","A Z","A X"}),Is.EqualTo(12));
     }
+
+    [Test]
+    public void ScoreCalculator2()
+    {
+        Assert.That(RockPaperScissors.ScoreCalculator("A X"),Is.EqualTo(4));
+    }
 }
