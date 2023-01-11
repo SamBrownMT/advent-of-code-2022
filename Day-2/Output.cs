@@ -8,9 +8,11 @@ public class Output
         File.ReadAllText("/Users/sam.brown/Advent-of-code-2022/Day-2/input.txt");
     private static readonly string[] FormattedInput = InputConverter.Split(Input,"\n");
     private static readonly int score = RockPaperScissors.TotalScore(FormattedInput);
+    private static readonly int newScore = RockPaperScissors.TotalScoreWithRoundEnd(FormattedInput);
     static void Main()
     {
         Console.WriteLine(score);
+        Console.WriteLine(newScore);
     }
 }
 
