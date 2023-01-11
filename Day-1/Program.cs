@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-namespace AdventOfCode
+using AdventOfCode;
+
+namespace Day_1
 {
     public class Calories
     {

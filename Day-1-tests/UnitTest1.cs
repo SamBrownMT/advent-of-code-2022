@@ -1,4 +1,5 @@
 using AdventOfCode;
+using Day_1;
 
 namespace Day_1_tests;
 

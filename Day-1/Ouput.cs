@@ -1,3 +1,5 @@
+using Day_1;
+
 namespace AdventOfCode
 {
     public class Output
