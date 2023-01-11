@@ -20,25 +20,6 @@ namespace AdventOfCode
             return totalCalories;
         }
 
-        public static int[] Sums(int[,] arr)
-        {
-            return new int[] { 6 };
-        }
-
-        public static int[] Convert(string[] arr)
-        {
-            return Array.ConvertAll(arr, IntegerParser);
-        }
-
-        public static int[][] ConvertToMultiArray(string[] arr)
-        {
-            return new int[][]
-            {
-                new int[] { 1,2,3 }, 
-                new int[] {4}
-            };
-        }
-
         public static int IntegerParser(string s)
         {
             try
