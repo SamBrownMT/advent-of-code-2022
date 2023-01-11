@@ -22,8 +22,20 @@ public class Tests
     }
 
     [Test]
-    public void ScoreCalculator2()
+    public void ScoreCalculator()
     {
         Assert.That(RockPaperScissors.ScoreCalculator("A X"),Is.EqualTo(4));
+    }
+
+    [Test]
+    public void RoundEndCalculator()
+    {
+        Assert.That(RockPaperScissors.RoundEndCalculator("B Z"),Is.EqualTo(9));
+    }
+
+    [Test]
+    public void TotalScoreWithRoundEnd()
+    {
+        Assert.That(RockPaperScissors.TotalScoreWithRoundEnd(new string[] {"A Y","B X","C Z"}),Is.EqualTo(12));
     }
 }

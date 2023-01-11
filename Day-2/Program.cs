@@ -14,6 +14,17 @@ namespace Day_2
 
             return score;
         }
+        
+        public static int TotalScoreWithRoundEnd(string[] arr)
+        {
+            var score = 0;
+            foreach (var round in arr)
+            {
+                score += RoundEndCalculator(round);
+            }
+
+            return score;
+        }
 
         public static int ScoreCalculator(string round)
         {
@@ -37,6 +48,34 @@ namespace Day_2
                 case "C Y": score = 2; 
                     break;
                 case "C Z": score = 6; 
+                    break;
+            }
+
+            return score;
+        }
+        
+        public static int RoundEndCalculator(string round)
+        {
+            var score = new int();
+            switch (round)
+            {
+                case "A X": score = 3; 
+                    break;
+                case "A Y": score = 4; 
+                    break;
+                case "A Z": score = 8; 
+                    break;
+                case "B X": score = 1; 
+                    break;
+                case "B Y": score = 5; 
+                    break;
+                case "B Z": score = 9; 
+                    break;
+                case "C X": score = 2; 
+                    break;
+                case "C Y": score = 6; 
+                    break;
+                case "C Z": score = 7; 
                     break;
             }
 
