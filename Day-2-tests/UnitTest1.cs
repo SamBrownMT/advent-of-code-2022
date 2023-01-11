@@ -14,4 +14,10 @@ public class Tests
     {
         Assert.That(RockPaperScissors.TotalScore(new string[] {"A Y","B X","C Z"}),Is.EqualTo(15));
     }
+    
+    [Test]
+    public void TotalScore2()
+    {
+        Assert.That(RockPaperScissors.TotalScore(new string[] {"B Y","A Z","A X"}),Is.EqualTo(12));
+    }
 }
