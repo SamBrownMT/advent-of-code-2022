@@ -4,7 +4,7 @@ namespace Day_3;
 
 public class RuckSack
 {
-    public static string RepeatedItem(string[] arr)
+    public static string RepeatedItem(string bag)
     {
         return "p";
     }
