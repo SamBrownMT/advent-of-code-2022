@@ -6,6 +6,11 @@ public class RuckSack
 {
     public static string RepeatedItem(string bag)
     {
-        return "p";
+        var bagSize = bag.Length;
+        var firstCompartment = bag.Substring(0, bagSize / 2);
+        var secondCompartment = bag.Substring((bagSize / 2), bagSize / 2);
+        var repeatedItem = firstCompartment.Intersect(secondCompartment);
+        return string.Join(" ",repeatedItem);
     }
+    
 }

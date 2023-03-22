@@ -1,6 +1,6 @@
 using AdventOfCode;
 
-namespace  Day_2;
+namespace  Day_3;
 
 public class Output
 {
