@@ -37,4 +37,28 @@ public class Tests
         const char c = 'L';
         Assert.That(RuckSack.Priority(c),Is.EqualTo(38));
     }
+    [Test]
+    public void PriorityNumber3()
+    {
+        const char c = 'A';
+        Assert.That(RuckSack.Priority(c),Is.EqualTo(27));
+    }
+    [Test]
+    public void PriorityNumber4()
+    {
+        const char c = 'a';
+        Assert.That(RuckSack.Priority(c),Is.EqualTo(1));
+    }
+    [Test]
+    public void PriorityNumber5()
+    {
+        const char c = 'Z';
+        Assert.That(RuckSack.Priority(c),Is.EqualTo(52));
+    }
+    [Test]
+    public void PriorityNumber6()
+    {
+        const char c = 'z';
+        Assert.That(RuckSack.Priority(c),Is.EqualTo(26));
+    }
 }
