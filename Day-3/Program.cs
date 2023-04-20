@@ -4,6 +4,18 @@ namespace Day_3;
 
 public class RuckSack
 {
+    public static int TotalPriorities(string[] bags)
+    {
+        var prioritySum = 0;
+        foreach (var bag in bags)
+        {
+            var repeatedItemArray = RepeatedItem(bag);
+            var repeatedItem = Priority(repeatedItemArray[0]);
+            prioritySum += repeatedItem;
+        }
+
+        return prioritySum;
+    }
     public static string RepeatedItem(string bag)
     {
         var bagSize = bag.Length;

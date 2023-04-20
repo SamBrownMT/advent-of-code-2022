@@ -61,4 +61,19 @@ public class Tests
         const char c = 'z';
         Assert.That(RuckSack.Priority(c),Is.EqualTo(26));
     }
+    [Test]
+    public void TotalPriorities()
+    {
+        var bags = new string[]
+        {
+            "vJrwpWtwJgWrhcsFMMfFFhFp",
+            "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
+            "PmmdzqPrVvPwwTWBwg",
+            "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
+            "ttgJtRGJQctTZtZT",
+            "CrZsJsPPZsGzwwsLwLmpwMDw"
+        };
+        
+        Assert.That(RuckSack.TotalPriorities(bags).Equals(157));
+    }
 }
