@@ -25,4 +25,16 @@ public class Tests
     {
         Assert.That(RuckSack.RepeatedItem("PmmdzqPrVvPwwTWBwg"),Is.EqualTo("P"));
     }
+    [Test]
+    public void PriorityNumber()
+    {
+        const char c = 'p';
+        Assert.That(RuckSack.Priority(c),Is.EqualTo(16));
+    }
+    [Test]
+    public void PriorityNumber2()
+    {
+        const char c = 'L';
+        Assert.That(RuckSack.Priority(c),Is.EqualTo(38));
+    }
 }
