@@ -90,4 +90,19 @@ public class Tests
 "ttgJtRGJQctTZtZT",
 "CrZsJsPPZsGzwwsLwLmpwMDw",}),Is.EqualTo("Z"));
     }
+    [Test]
+    public void TotalBadgePriorities()
+    {
+        var bags = new string[]
+        {
+            "vJrwpWtwJgWrhcsFMMfFFhFp",
+            "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
+            "PmmdzqPrVvPwwTWBwg",
+            "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
+            "ttgJtRGJQctTZtZT",
+            "CrZsJsPPZsGzwwsLwLmpwMDw"
+        };
+        
+        Assert.That(RuckSack.TotalBadgePriorities(bags),Is.EqualTo(70));
+    }
 }

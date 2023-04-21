@@ -16,6 +16,18 @@ public class RuckSack
 
         return prioritySum;
     }
+
+    public static int TotalBadgePriorities(string[] bags)
+    {
+        var prioritySum = 0;
+        for (int i = 0; i < bags.Length; i+=3)
+        {
+            var sharedBadge = RepeatedItem(bags[i..(i + 3)]);
+            prioritySum += Priority(sharedBadge.ToCharArray()[0]);
+        }
+
+        return prioritySum;
+    }
     public static string RepeatedItem(string bag)
     {
         var bagSize = bag.Length;
