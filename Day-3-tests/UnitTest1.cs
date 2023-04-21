@@ -76,4 +76,18 @@ public class Tests
         
         Assert.That(RuckSack.TotalPriorities(bags).Equals(157));
     }
+    [Test]
+    public void RepeatedItemList()
+    {
+        Assert.That(RuckSack.RepeatedItem(new string[] {"vJrwpWtwJgWrhcsFMMfFFhFp",
+            "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
+            "PmmdzqPrVvPwwTWBwg"}),Is.EqualTo("r"));
+    }
+    [Test]
+    public void RepeatedItemList2()
+    {
+        Assert.That(RuckSack.RepeatedItem(new string[] {"wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
+"ttgJtRGJQctTZtZT",
+"CrZsJsPPZsGzwwsLwLmpwMDw",}),Is.EqualTo("Z"));
+    }
 }

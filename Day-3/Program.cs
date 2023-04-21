@@ -24,6 +24,13 @@ public class RuckSack
         var repeatedItem = firstCompartment.Intersect(secondCompartment);
         return string.Join(" ",repeatedItem);
     }
+
+    public static string RepeatedItem(string[] bags)
+    {
+        var first_intersect = bags[0].Intersect(bags[1]);
+        var second_intersect = first_intersect.Intersect(bags[2]);
+        return string.Join(" ",second_intersect);
+    }
     public static int Priority(char letter)
     {
         var upperLetter = char.ToUpper(letter);
