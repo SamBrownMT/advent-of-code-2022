@@ -40,4 +40,22 @@ public class Tests
         var elves = new int[][] {new int[] {2,5},new int[]{4,5}};
         Assert.That(Cleanup.IsFullyContained(elves),Is.EqualTo(true));
     }
+    [Test]
+    public void Overlaps()
+    {
+        var elves = new int[][] {new int[] {2,5},new int[]{4,5}};
+        Assert.That(Cleanup.Overlaps(elves),Is.EqualTo(true));
+    }
+    [Test]
+    public void Overlaps2()
+    {
+        var elves = new int[][] {new int[] {2,3},new int[]{4,5}};
+        Assert.That(Cleanup.Overlaps(elves),Is.EqualTo(false));
+    }
+    [Test]
+    public void Overlaps3()
+    {
+        var elves = new int[][] {new int[] {4,5},new int[]{2,4}};
+        Assert.That(Cleanup.Overlaps(elves),Is.EqualTo(true));
+    }
 }

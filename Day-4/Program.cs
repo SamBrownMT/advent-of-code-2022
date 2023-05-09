@@ -36,4 +36,34 @@ public class Cleanup
         
         return false;
     }
+
+    public static bool Overlaps(int[][] elves)
+    {
+        if (elves[0][0] <= elves[1][0] && elves[1][0] <= elves[0][1])
+        {
+            return true;
+        }
+        
+        if (elves[1][0] <= elves[0][0] && elves[0][0] <= elves[1][1])
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static int FullyContainedSum(string[] elves)
+    {
+        var containedSum = 0;
+        foreach (var pair in elves)
+        {
+            var formattedPair = ElfFormatter(pair);
+            if (IsFullyContained(formattedPair))
+            {
+                containedSum += 1;
+            }
+        }
+
+        return containedSum;
+    }
 }
