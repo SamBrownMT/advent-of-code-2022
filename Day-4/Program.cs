@@ -51,7 +51,7 @@ public class Cleanup
 
         return false;
     }
-
+    
     public static int FullyContainedSum(string[] elves)
     {
         var containedSum = 0;
@@ -65,5 +65,20 @@ public class Cleanup
         }
 
         return containedSum;
+    }
+
+    public static int OverlapSum(string[] elves)
+    {
+        var overlapSum = 0;
+        foreach (var pair in elves)
+        {
+            var formattedPair = ElfFormatter(pair);
+            if (Overlaps(formattedPair))
+            {
+                overlapSum += 1;
+            }
+        }
+
+        return overlapSum;
     }
 }
